@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "sessions": {
+      "$sessionCode": {
+        ".read": true,
+        ".write": true,
+        "students": {
+          "$studentId": {
+            ".validate": "newData.hasChildren(['name', 'joined'])"
+          }
+        }
+      }
+    }
+  }
+}
